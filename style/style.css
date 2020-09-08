@@ -1,0 +1,416 @@
+/*********************Personalized font*********************/
+@font-face {
+  font-family: 'Galada-Regular';
+    src: url('Galada-Regular.eot');
+    src: url('Galada-Regular.eot?#iefix') format('embedded-opentype'),
+         url('Galada-Regular.ttf') format('truetype'),
+         url('Galada-Regular.svg#Galada-Regular') format('svg');
+}
+
+/*********************Scroll bar CSS*********************/
+#progress {
+  background-color: #88d498;
+  height: 10px;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  opacity: 90%;
+}
+
+/*********************text-rendering : lisibility over rapidity & overflow-x : wrap item*********************/
+html,
+body {
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/*********************body CSS*********************/
+body {
+  text-align: center;
+  background-color: #f5f5f5;
+  width: auto;
+}
+
+/*********************logo CSS*********************/
+.logo {
+  height: 80px;
+  width: auto;
+  float: right;
+  margin: 5px;
+  border-radius: 50px;
+}
+
+/*********************h1="Poch'Lib" CSS*********************/
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+
+  color: black;
+
+  border: 3px black;
+  border-radius: 5px;
+
+  background-color: #ebebeb;
+  box-shadow: 0px 3px 0px grey;
+
+  padding: 12px;
+}
+
+/*********************"h2=Nouveau Livre" - "Ma poch'liste" - "Résultats de recherche" CSS*********************/
+h2 {
+  font-family: "Galada-Regular", Times, serif;
+  text-align: center;
+
+  color: black;
+  padding-top: 10px;
+
+}
+
+/*********************Button : "Ajouter un livre" CSS*********************/
+#buttonAddBook {
+  border: none;
+  border-radius: 5px;
+  height: 35px;
+  width: 140px;
+  background-color: #157a5c;
+  color: whitesmoke;
+  text-align: center;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  padding: auto;
+  outline: none;
+}
+
+/*********************div="divForm" CSS*********************/
+#divForm_fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: 15px;
+  text-align: left;
+}
+
+label {
+  padding-left: 2px;
+  font-family: cursive;
+  color: #188c6b;
+  font-weight: bold;
+}
+
+input {
+  font-family: cursive;
+  background-color: #85eacc;
+  border-radius: 10px;
+  outline: none;
+  border: 2px;
+}
+
+input:focus {
+  border: 2px solid #6d6875;
+}
+
+.errorMessage {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+#divForm_buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-left: 5px;
+}
+
+#buttonSearchBook {
+  border: none;
+  border-radius: 5px;
+  height: 35px;
+  width: 140px;
+  background-color: #157a5c;
+  color: whitesmoke;
+  text-align: center;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  padding: auto;
+  outline: none;
+}
+
+#buttonCancelSearchBook {
+  border: none;
+  border-radius: 5px;
+  height: 35px;
+  width: 140px;
+  background-color: #e76f51;
+  color: whitesmoke;
+  text-align: center;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  padding: auto;
+  outline: none;
+}
+
+/*********************hr CSS*********************/
+hr {
+  border: 2px dotted black;
+  border-radius: 5px;
+}
+
+/*********************div="content" CSS*********************/
+#divBooksInMyPochList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+
+/*********************div="Résultat de recherche" CSS*********************/
+#divResultBooks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+
+/*********************div="divResultBook" CSS*********************/
+#divResultBook {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+}
+
+.divResultBookHeader {
+  background-color: #23d19d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  height: 20px;
+}
+
+i {
+  size: 900px;
+}
+
+.divResultBookBody {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: #1eae83;
+  color: whitesmoke;
+  justify-content: space-between;
+}
+
+.resultBookId {
+  font-style: italic;
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+.resultBookAuthor {
+  padding-left: 15px;
+}
+
+.resultBookDescription {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 15px;
+  padding-right: 50px;
+  height: 10px;
+}
+
+.resultbookImg {
+  display: block;
+  margin: auto;
+  max-height: 100px;
+  padding-bottom: 8px;
+}
+
+.resultbookImgBlock {
+  margin-top: 50px;
+}
+
+/*********************Responsive Design*********************/
+/*mobile*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .logo {
+    height: 70px;
+    width: auto;
+    float: right;
+    margin: 5px;
+    border-radius: 50px;
+  }
+
+  h1 {
+    font-size: 1.1em;
+
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+
+  label {
+    font-size: 0.6em;
+    padding: 10px;
+  }
+
+  input {
+    font-size: 0.6em;
+    padding: 10px;
+  }
+
+  .errorMessage {
+    font-size: 0.6em;
+  }
+
+  #divForm_buttons {
+    align-items: center;
+  }
+
+  #divResultBook {
+    width: 100%;
+  }
+
+  .resultBookTitle{
+    font-size: 0.9em;
+  }
+
+  .divResultBookBody {
+    font-size: 0.7em;
+  }
+
+}
+
+/*Tablet*/
+@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+  h1 {
+    font-size: 1.4em;
+  }
+
+  h2 {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+
+  label {
+    font-size: 0.7em;
+    padding: 10px;
+  }
+
+  input {
+    font-size: 0.7em;
+    padding: 10px;
+  }
+
+  hr {
+    margin: 0px;
+  }
+
+  #divResultBook {
+    width: 47%;
+    margin-top: 0px;
+  }
+
+  .resultBookTitle{
+    font-size: 0.9em;
+  }
+
+  .divResultBookBody {
+    font-size: 0.7em;
+    }
+}
+
+  /*Desktop*/
+@media only screen and (min-device-width : 1024px) {
+  h1 {
+    font-size: 1.6em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+  }
+
+  label {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  input {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  #buttonAddBook {
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 400ms;
+    opacity: 1;
+  }
+  #buttonAddBook:hover {
+    transform: scale(1.25);
+    opacity: 0.7;
+  }
+
+  #buttonSearchBook {
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 400ms;
+    opacity: 1;
+  }
+  #buttonSearchBook:hover {
+    transform: scale(1.25);
+    opacity: 0.7;
+  }
+
+  #buttonCancelSearchBook {
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 400ms;
+    opacity: 1;
+  }
+  #buttonCancelSearchBook:hover {
+    transform: scale(1.25);
+    opacity: 0.9;
+  }
+
+  hr {
+    margin: 0px;
+  }
+
+  #divResultBook {
+    width: 46%;
+    margin-top: 0px;
+    transform: scale(1);
+    transition: transform 400ms;
+  }
+
+  #divResultBook:hover {
+    transform: scale(1.05);
+  }
+
+  i:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+  }
+
+  .resultBookTitle{
+    font-size: 1.1em;
+  }
+
+  .divResultBookBody {
+    font-size: 0.9em;
+  }
+}
