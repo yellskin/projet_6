@@ -177,7 +177,7 @@ function whenOnClick_Searched() {
         searched_title +
         "+inauthor:" +
         searched_author +
-        "&key=AIzaSyCb5WGxTMvKOwlIbEF8aDYehEHAgym0u1I",
+        "&key=yourAPIKey",
       dataType: "json",
       type: "GET",
       success: function (data) {
