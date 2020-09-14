@@ -1,13 +1,29 @@
-@charset "UTF-8";
+$colorBackgroundScrollBar: #88d498;
+$colorBackgroundBody:#f5f5f5;
+$colorBlack:black;
+$colorBackgroundH1: #ebebeb;
+$colorGrey: grey;
+$colorBackgroundButtonAddBook : #157a5c;
+$colorWhiteSmoke : whitesmoke;
+$colorLabel : #188c6b;
+$colorInput : #85eacc;
+$colorInputFocus : #6d6875;
+$colorBackgroundCancel : #e76f51;
+$colorHeaderBook : #23d19d;
+$colorBodyBook : #1eae83;
+
 /*********************Personalized font*********************/
 @font-face {
-  font-family: "Galada-Regular";
-  src: url("Galada-Regular.eot");
-  src: url("Galada-Regular.eot?#iefix") format("embedded-opentype"), url("Galada-Regular.ttf") format("truetype"), url("Galada-Regular.svg#Galada-Regular") format("svg");
+  font-family: 'Galada-Regular';
+    src: url('Galada-Regular.eot');
+    src: url('Galada-Regular.eot?#iefix') format('embedded-opentype'),
+         url('Galada-Regular.ttf') format('truetype'),
+         url('Galada-Regular.svg#Galada-Regular') format('svg');
 }
+
 /*********************Scroll bar CSS*********************/
 #progress {
-  background-color: #88d498;
+  background-color: $colorBackgroundScrollBar;
   height: 10px;
   width: 0;
   position: fixed;
@@ -27,7 +43,7 @@ body {
 /*********************body CSS*********************/
 body {
   text-align: center;
-  background-color: #f5f5f5;
+  background-color: $colorBackgroundBody;
   width: auto;
 }
 
@@ -44,11 +60,15 @@ body {
 h1 {
   font-family: "Times New Roman", Times, serif;
   text-align: center;
-  color: black;
-  border: 3px black;
+
+  color: $colorBlack;
+
+  border: 3px $colorBlack;
   border-radius: 5px;
-  background-color: #ebebeb;
-  box-shadow: 0px 3px 0px grey;
+
+  background-color: $colorBackgroundH1;
+  box-shadow: 0px 3px 0px $colorGrey;
+
   padding: 12px;
 }
 
@@ -56,8 +76,10 @@ h1 {
 h2 {
   font-family: "Galada-Regular", Times, serif;
   text-align: center;
-  color: black;
+
+  color: $colorBlack;
   padding-top: 10px;
+
 }
 
 /*********************Button : "Ajouter un livre" CSS*********************/
@@ -66,8 +88,8 @@ h2 {
   border-radius: 5px;
   height: 35px;
   width: 140px;
-  background-color: #157a5c;
-  color: whitesmoke;
+  background-color: $colorBackgroundButtonAddBook;
+  color: $colorWhiteSmoke;
   text-align: center;
   margin: auto;
   margin-top: 5px;
@@ -87,20 +109,20 @@ h2 {
 label {
   padding-left: 2px;
   font-family: cursive;
-  color: #188c6b;
+  color: $colorLabel;
   font-weight: bold;
 }
 
 input {
   font-family: cursive;
-  background-color: #85eacc;
+  background-color: $colorInput;
   border-radius: 10px;
   outline: none;
   border: 2px;
 }
 
 input:focus {
-  border: 2px solid #6d6875;
+  border: 2px solid $colorInputFocus;
 }
 
 .errorMessage {
@@ -121,8 +143,8 @@ input:focus {
   border-radius: 5px;
   height: 35px;
   width: 140px;
-  background-color: #157a5c;
-  color: whitesmoke;
+  background-color: $colorBackgroundButtonAddBook;
+  color: $colorWhiteSmoke;
   text-align: center;
   margin-left: 10px;
   margin-bottom: 15px;
@@ -134,8 +156,8 @@ input:focus {
   border-radius: 5px;
   height: 35px;
   width: 140px;
-  background-color: #e76f51;
-  color: whitesmoke;
+  background-color: $colorBackgroundCancel;
+  color: $colorWhiteSmoke;
   text-align: center;
   margin-left: 10px;
   margin-bottom: 15px;
@@ -144,7 +166,7 @@ input:focus {
 
 /*********************hr CSS*********************/
 hr {
-  border: 2px dotted black;
+  border: 2px dotted $colorBlack;
   border-radius: 5px;
 }
 
@@ -171,14 +193,14 @@ hr {
   display: flex;
   flex-direction: column;
   text-align: left;
-  border: 3px solid black;
+  border: 3px solid $colorBlack;
   border-radius: 5px;
   margin-bottom: 30px;
-  box-shadow: 0 2px 6px black;
+  box-shadow: 0 2px 6px $colorBlack;
 }
 
 .divResultBookHeader {
-  background-color: #23d19d;
+  background-color: $colorHeaderBook;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -190,8 +212,8 @@ hr {
 .divResultBookBody {
   display: flex;
   flex-direction: column;
-  background-color: #1eae83;
-  color: whitesmoke;
+  background-color: $colorBodyBook;
+  color: $colorWhiteSmoke;
   justify-content: space-between;
 }
 
@@ -227,7 +249,7 @@ hr {
 
 /*********************Responsive Design*********************/
 /*mobile*/
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width : 320px) and (max-width : 480px) {
   .logo {
     height: 70px;
     width: auto;
@@ -238,6 +260,7 @@ hr {
 
   h1 {
     font-size: 1.1em;
+
   }
 
   h2 {
@@ -266,16 +289,18 @@ hr {
     width: 100%;
   }
 
-  .resultBookTitle {
+  .resultBookTitle{
     font-size: 0.9em;
   }
 
   .divResultBookBody {
     font-size: 0.7em;
   }
+
 }
+
 /*Tablet*/
-@media only screen and (min-width: 481px) and (max-width: 1024px) {
+@media only screen and (min-width : 481px) and (max-width : 1024px) {
   h1 {
     font-size: 1.4em;
   }
@@ -304,16 +329,17 @@ hr {
     margin-top: 0px;
   }
 
-  .resultBookTitle {
+  .resultBookTitle{
     font-size: 0.9em;
   }
 
   .divResultBookBody {
     font-size: 0.7em;
-  }
+    }
 }
-/*Desktop*/
-@media only screen and (min-width: 1024px) {
+
+  /*Desktop*/
+@media only screen and (min-width : 1024px) {
   h1 {
     font-size: 1.6em;
   }
@@ -338,10 +364,10 @@ hr {
     transform: scale(1);
     transition: transform 400ms;
     opacity: 1;
-  }
-  #buttonAddBook:hover, #buttonSearchBook:hover, #buttonCancelSearchBook:hover {
-    transform: scale(1.25);
-    opacity: 0.9;
+    &:hover {
+      transform: scale(1.25);
+      opacity: 0.9;
+    }
   }
 
   hr {
@@ -353,9 +379,9 @@ hr {
     margin-top: 0px;
     transform: scale(1);
     transition: transform 400ms;
-  }
-  #divResultBook:hover {
-    transform: scale(1.05);
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   i:hover {
@@ -363,7 +389,7 @@ hr {
     transform: scale(1.5);
   }
 
-  .resultBookTitle {
+  .resultBookTitle{
     font-size: 1.1em;
   }
 
@@ -371,5 +397,3 @@ hr {
     font-size: 0.9em;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

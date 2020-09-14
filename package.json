@@ -1,0 +1,19 @@
+{
+  "name": "projet_6",
+  "version": "1.0.0",
+  "description": "Such as Google Books, Poch'lib is an application where users can search books and save them in their online library. Searching by Title and Author, application will return a list of books with few informations such as : book title, book author, book Id, book description, cover book. It will help \"La plume enchanté\", a little library, where customers will save books and come get it in store. Application is build in Single Page Application and mobile-first method.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./style/style.scss:./style/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yellskin/projet_6.git"
+  },
+  "author": "VO Frederic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yellskin/projet_6/issues"
+  },
+  "homepage": "https://github.com/yellskin/projet_6#readme"
+}
